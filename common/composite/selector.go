@@ -1,7 +1,7 @@
 package composite
 
 import (
-	"github.com/askft/go-behave/core"
+	"go-behave/core"
 )
 
 // Selector updates each child in order, returning success as soon as

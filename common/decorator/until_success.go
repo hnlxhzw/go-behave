@@ -1,7 +1,7 @@
 package decorator
 
 import (
-	"github.com/askft/go-behave/core"
+	"go-behave/core"
 )
 
 // UntilSuccess updates its child until it returns Success.

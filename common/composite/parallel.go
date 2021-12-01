@@ -1,7 +1,7 @@
 package composite
 
 import (
-	"github.com/askft/go-behave/core"
+	"go-behave/core"
 )
 
 // Parallel updates all its children in parallel, i.e. every frame.

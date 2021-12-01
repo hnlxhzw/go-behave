@@ -9,16 +9,12 @@ import (
 // and Returns: data keys that the implementation exports.
 type Leaf struct {
 	*BaseNode
-	Params  Params
-	Returns Returns
 }
 
 // NewLeaf creates a new leaf base node.
-func NewLeaf(name string, params Params, returns Returns) *Leaf {
+func NewLeaf(name string) *Leaf {
 	return &Leaf{
 		BaseNode: newBaseNode(CategoryLeaf, name),
-		Params:   params,  // TODO (remove): These are only used for String()
-		Returns:  returns, // TODO (remove): These are only used for String()
 	}
 }
 
@@ -30,9 +26,5 @@ func (a *Leaf) GetChildren() []Node {
 
 // String returns a string representation of the leaf node.
 func (a *Leaf) String() string {
-	return fmt.Sprintf("! %s (%v : %v)",
-		a.name,
-		a.Params,
-		a.Returns,
-	)
+	return fmt.Sprintf("! %s", a.name)
 }

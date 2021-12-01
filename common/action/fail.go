@@ -1,12 +1,12 @@
 package action
 
 import (
-	"github.com/askft/go-behave/core"
+	"go-behave/core"
 )
 
 // Fail returns a new fail node, which always fails in one tick.
-func Fail(params core.Params, returns core.Returns) core.Node {
-	base := core.NewLeaf("Fail", params, returns)
+func Fail() core.Node {
+	base := core.NewLeaf("Fail")
 	return &fail{Leaf: base}
 }
 

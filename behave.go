@@ -1,9 +1,9 @@
 package behave
 
 import (
-	"github.com/askft/go-behave/core"
-	"github.com/askft/go-behave/internal"
-	"github.com/askft/go-behave/util"
+	"go-behave/core"
+	"go-behave/internal"
+	"go-behave/util"
 )
 
 // Config describes the configuration of a BehaviorTree object.

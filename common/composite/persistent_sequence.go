@@ -1,7 +1,7 @@
 package composite
 
 import (
-	"github.com/askft/go-behave/core"
+	"go-behave/core"
 )
 
 // PersistentSequence updates each child in order. If a child

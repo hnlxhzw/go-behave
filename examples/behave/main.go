@@ -4,17 +4,17 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/askft/go-behave"
-	"github.com/askft/go-behave/core"
-	"github.com/askft/go-behave/store"
-	"github.com/askft/go-behave/util"
+	"go-behave"
+	"go-behave/core"
+	"go-behave/store"
+	"go-behave/util"
 
 	// Use dot imports to make a tree definition look nice.
 	// Be careful when doing this! These packages export
 	// common word identifiers such as "Fail" and "Sequence".
-	. "github.com/askft/go-behave/common/action"
-	. "github.com/askft/go-behave/common/composite"
-	. "github.com/askft/go-behave/common/decorator"
+	. "go-behave/common/action"
+	. "go-behave/common/composite"
+	. "go-behave/common/decorator"
 )
 
 // var delayingRoot = Repeater(core.Params{"n": 2},
@@ -31,8 +31,19 @@ import (
 // )
 
 var someRoot = Sequence(
-	Repeater(core.Params{"n": 2}, Fail(nil, nil)),
-	Succeed(nil, nil),
+	Repeater(core.Params{"n": 2}, Succeed()),
+	//Delayer(core.Params{"ms":2000}, Succeed()),
+	RandomDelayer(core.Params{"msMin":1000, "msMax":3000}, Succeed()),
+	//Succeed(),
+	RandomSelector(Work(func() {
+		fmt.Println("WorkWorkWorkWork111!!!!")
+	}), Work(func() {
+		fmt.Println("WorkWorkWorkWork222!!!!")
+	}),Work(func() {
+		fmt.Println("WorkWorkWorkWork333!!!!")
+	}),Work(func() {
+		fmt.Println("WorkWorkWorkWork444!!!!")
+	})),
 )
 
 // ID is a simple type only used as tree owner for testing.
@@ -64,11 +75,11 @@ func testTree(root core.Node) {
 	for {
 		status := tree.Update()
 		util.PrintTreeInColor(tree.Root)
-		fmt.Println()
+		fmt.Println(time.Now())
 		if status == core.StatusSuccess {
-			break
+			//break
 		}
-		time.Sleep(100 * time.Millisecond)
+		time.Sleep(1000 * time.Millisecond)
 	}
 
 	fmt.Println("Done!")

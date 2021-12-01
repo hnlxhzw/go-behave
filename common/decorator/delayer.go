@@ -3,10 +3,10 @@ package decorator
 import (
 	"time"
 
-	"github.com/askft/go-behave/core"
+	"go-behave/core"
 )
 
-// Delayer ...
+// Delayer core.Params{"ms":2000}
 func Delayer(params core.Params, child core.Node) core.Node {
 	base := core.NewDecorator("Delayer", params, child)
 	d := &delayer{Decorator: base}

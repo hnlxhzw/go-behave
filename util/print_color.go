@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/askft/go-behave/core"
+	"go-behave/core"
 
 	"github.com/fatih/color"
 )
@@ -47,5 +47,5 @@ var colorFor = map[core.Status]color.Attribute{
 	core.StatusFailure: color.FgRed,
 	core.StatusRunning: color.FgYellow,
 	core.StatusSuccess: color.FgGreen,
-	core.StatusInvalid: color.FgMagenta,
+	core.StatusInvalid: color.FgBlack,
 }
