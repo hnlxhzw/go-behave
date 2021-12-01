@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4914e991-bf7a-4347-b24c-7df71f10f0ff" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/action/work.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/decorator/random_delayer.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/behave.go" beforeDir="false" afterPath="$PROJECT_DIR$/behave.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/action/fail.go" beforeDir="false" afterPath="$PROJECT_DIR$/common/action/fail.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/action/succeed.go" beforeDir="false" afterPath="$PROJECT_DIR$/common/action/succeed.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/action/work.go" beforeDir="false" afterPath="$PROJECT_DIR$/common/action/work.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/composite/active_sequence.go" beforeDir="false" afterPath="$PROJECT_DIR$/common/composite/active_sequence.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/composite/parallel.go" beforeDir="false" afterPath="$PROJECT_DIR$/common/composite/parallel.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/composite/persistent_sequence.go" beforeDir="false" afterPath="$PROJECT_DIR$/common/composite/persistent_sequence.go" afterDir="false" />
@@ -17,10 +16,9 @@
       <change beforePath="$PROJECT_DIR$/common/composite/sequence.go" beforeDir="false" afterPath="$PROJECT_DIR$/common/composite/sequence.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/decorator/delayer.go" beforeDir="false" afterPath="$PROJECT_DIR$/common/decorator/delayer.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/decorator/inverter.go" beforeDir="false" afterPath="$PROJECT_DIR$/common/decorator/inverter.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/decorator/random_delayer.go" beforeDir="false" afterPath="$PROJECT_DIR$/common/decorator/random_delayer.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/decorator/repeater.go" beforeDir="false" afterPath="$PROJECT_DIR$/common/decorator/repeater.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/decorator/until_failure.go" beforeDir="false" afterPath="$PROJECT_DIR$/common/decorator/until_failure.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/decorator/until_success.go" beforeDir="false" afterPath="$PROJECT_DIR$/common/decorator/until_success.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/action.go" beforeDir="false" afterPath="$PROJECT_DIR$/core/action.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/examples/behave/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/examples/behave/main.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/util/print_color.go" beforeDir="false" afterPath="$PROJECT_DIR$/util/print_color.go" afterDir="false" />
@@ -58,13 +56,22 @@
       <recent name="$PROJECT_DIR$/common/action" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Build.go build go-behave/examples/behave">
+  <component name="RunManager" selected="Go Build.go build github.com/woshihaomei/go-behave/examples/behave">
     <configuration name="go build github.com/askft/go-behave/examples/behave" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="go-behave" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
       <filePath value="$PROJECT_DIR$/examples/behave/main.go" />
       <package value="github.com/askft/go-behave/examples/behave" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build github.com/woshihaomei/go-behave/examples/behave" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="go-behave" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <filePath value="$PROJECT_DIR$/examples/behave/main.go" />
+      <package value="github.com/woshihaomei/go-behave/examples/behave" />
       <directory value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
@@ -79,6 +86,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Build.go build github.com/woshihaomei/go-behave/examples/behave" />
         <item itemvalue="Go Build.go build go-behave/examples/behave" />
         <item itemvalue="Go Build.go build github.com/askft/go-behave/examples/behave" />
       </list>

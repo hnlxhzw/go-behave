@@ -1,7 +1,7 @@
 package decorator
 
 import (
-	"go-behave/core"
+	"github.com/woshihaomei/go-behave/core"
 )
 
 // Inverter ...

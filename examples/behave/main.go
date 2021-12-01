@@ -4,17 +4,17 @@ import (
 	"fmt"
 	"time"
 
-	"go-behave"
-	"go-behave/core"
-	"go-behave/store"
-	"go-behave/util"
+	"github.com/woshihaomei/go-behave"
+	"github.com/woshihaomei/go-behave/core"
+	"github.com/woshihaomei/go-behave/store"
+	"github.com/woshihaomei/go-behave/util"
 
 	// Use dot imports to make a tree definition look nice.
 	// Be careful when doing this! These packages export
 	// common word identifiers such as "Fail" and "Sequence".
-	. "go-behave/common/action"
-	. "go-behave/common/composite"
-	. "go-behave/common/decorator"
+	. "github.com/woshihaomei/go-behave/common/action"
+	. "github.com/woshihaomei/go-behave/common/composite"
+	. "github.com/woshihaomei/go-behave/common/decorator"
 )
 
 // var delayingRoot = Repeater(core.Params{"n": 2},

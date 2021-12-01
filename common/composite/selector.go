@@ -1,7 +1,7 @@
 package composite
 
 import (
-	"go-behave/core"
+	"github.com/woshihaomei/go-behave/core"
 )
 
 // Selector updates each child in order, returning success as soon as

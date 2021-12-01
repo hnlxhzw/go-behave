@@ -1,7 +1,7 @@
 package decorator
 
 import (
-	"go-behave/core"
+	"github.com/woshihaomei/go-behave/core"
 )
 
 // Repeater updates its child n times, at which point the repeater

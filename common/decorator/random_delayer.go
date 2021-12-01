@@ -4,7 +4,7 @@ import (
 	"math/rand"
 	"time"
 
-	"go-behave/core"
+	"github.com/woshihaomei/go-behave/core"
 )
 
 // RandomDelayer 随机延迟

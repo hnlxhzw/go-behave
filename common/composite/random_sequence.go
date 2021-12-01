@@ -3,7 +3,7 @@ package composite
 import (
 	"math/rand"
 
-	"go-behave/core"
+	"github.com/woshihaomei/go-behave/core"
 )
 
 // RandomSequence works just like Sequence, except it shuffles

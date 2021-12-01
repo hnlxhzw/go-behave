@@ -1,7 +1,7 @@
 package action
 
 import (
-	"go-behave/core"
+	"github.com/woshihaomei/go-behave/core"
 )
 
 //Work tick 时候执行执行的func
