@@ -10,7 +10,7 @@ import (
 // RandomDelayer 随机延迟
 func RandomDelayer(params core.Params, child core.Node) core.Node {
 	base := core.NewDecorator("RandomDelayer", params, child)
-	d := &delayer{Decorator: base}
+	d := &randomDelayer{Decorator: base}
 
 	msMin, err := params.GetInt("msMin")
 	if err != nil {
@@ -21,21 +21,24 @@ func RandomDelayer(params core.Params, child core.Node) core.Node {
 		panic(err)
 	}
 
-	ms := rand.Intn(msMax-msMin) + msMin
-
-	d.delay = time.Duration(ms) * time.Millisecond
+	d.delayMin = msMin
+	d.delayMax = msMax
 	return d
 }
 
 // delayer ...
 type randomDelayer struct {
 	*core.Decorator
+	delayMin int
+	delayMax int
 	delay time.Duration // delay in milliseconds
 	start time.Time
 }
 
 // Enter ...
 func (d *randomDelayer) Enter(ctx *core.Context) {
+	ms := rand.Intn(d.delayMax-d.delayMin) + d.delayMin
+	d.delay = time.Duration(ms) * time.Millisecond
 	d.start = time.Now()
 }
 
