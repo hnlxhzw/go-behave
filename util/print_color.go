@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/woshihaomei/go-behave/core"
+	"github.com/hnlxhzw/go-behave/core"
 
 	"github.com/fatih/color"
 )

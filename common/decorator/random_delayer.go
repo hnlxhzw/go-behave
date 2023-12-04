@@ -4,7 +4,7 @@ import (
 	"math/rand"
 	"time"
 
-	"github.com/woshihaomei/go-behave/core"
+	"github.com/hnlxhzw/go-behave/core"
 )
 
 // RandomDelayer 随机延迟
@@ -31,8 +31,8 @@ type randomDelayer struct {
 	*core.Decorator
 	delayMin int
 	delayMax int
-	delay time.Duration // delay in milliseconds
-	start time.Time
+	delay    time.Duration // delay in milliseconds
+	start    time.Time
 }
 
 // Enter ...

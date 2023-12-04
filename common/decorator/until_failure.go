@@ -1,7 +1,7 @@
 package decorator
 
 import (
-	"github.com/woshihaomei/go-behave/core"
+	"github.com/hnlxhzw/go-behave/core"
 )
 
 // UntilFailure updates its child until it returns Failure.

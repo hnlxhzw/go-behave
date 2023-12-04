@@ -1,7 +1,7 @@
 package action
 
 import (
-	"github.com/woshihaomei/go-behave/core"
+	"github.com/hnlxhzw/go-behave/core"
 )
 
 // Fail returns a new fail node, which always fails in one tick.

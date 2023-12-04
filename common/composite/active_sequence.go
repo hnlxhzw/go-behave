@@ -1,7 +1,7 @@
 package composite
 
 import (
-	"github.com/woshihaomei/go-behave/core"
+	"github.com/hnlxhzw/go-behave/core"
 )
 
 // ActiveSequence ticks each child in order. Returns success if

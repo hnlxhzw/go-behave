@@ -4,17 +4,17 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/woshihaomei/go-behave"
-	"github.com/woshihaomei/go-behave/core"
-	"github.com/woshihaomei/go-behave/store"
-	"github.com/woshihaomei/go-behave/util"
+	"github.com/hnlxhzw/go-behave"
+	"github.com/hnlxhzw/go-behave/core"
+	"github.com/hnlxhzw/go-behave/store"
+	"github.com/hnlxhzw/go-behave/util"
 
 	// Use dot imports to make a tree definition look nice.
 	// Be careful when doing this! These packages export
 	// common word identifiers such as "Fail" and "Sequence".
-	. "github.com/woshihaomei/go-behave/common/action"
-	. "github.com/woshihaomei/go-behave/common/composite"
-	. "github.com/woshihaomei/go-behave/common/decorator"
+	. "github.com/hnlxhzw/go-behave/common/action"
+	. "github.com/hnlxhzw/go-behave/common/composite"
+	. "github.com/hnlxhzw/go-behave/common/decorator"
 )
 
 // var delayingRoot = Repeater(core.Params{"n": 2},
@@ -33,15 +33,15 @@ import (
 var someRoot = Sequence(
 	Repeater(core.Params{"n": 2}, Succeed()),
 	//Delayer(core.Params{"ms":2000}, Succeed()),
-	RandomDelayer(core.Params{"msMin":1000, "msMax":3000}, Succeed()),
+	RandomDelayer(core.Params{"msMin": 1000, "msMax": 3000}, Succeed()),
 	//Succeed(),
 	RandomSelector(Work(func() {
 		fmt.Println("WorkWorkWorkWork111!!!!")
 	}), Work(func() {
 		fmt.Println("WorkWorkWorkWork222!!!!")
-	}),Work(func() {
+	}), Work(func() {
 		fmt.Println("WorkWorkWorkWork333!!!!")
-	}),Work(func() {
+	}), Work(func() {
 		fmt.Println("WorkWorkWorkWork444!!!!")
 	})),
 )

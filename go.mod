@@ -1,4 +1,4 @@
-module github.com/woshihaomei/go-behave
+module github.com/hnlxhzw/go-behave
 
 go 1.12
 

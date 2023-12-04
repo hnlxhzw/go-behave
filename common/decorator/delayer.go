@@ -3,7 +3,7 @@ package decorator
 import (
 	"time"
 
-	"github.com/woshihaomei/go-behave/core"
+	"github.com/hnlxhzw/go-behave/core"
 )
 
 // Delayer core.Params{"ms":2000}

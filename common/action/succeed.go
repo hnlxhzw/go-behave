@@ -1,7 +1,7 @@
 package action
 
 import (
-	"github.com/woshihaomei/go-behave/core"
+	"github.com/hnlxhzw/go-behave/core"
 )
 
 // Succeed returns a new succeed node, which always succeeds in one tick.

@@ -1,7 +1,7 @@
 package composite
 
 import (
-	"github.com/woshihaomei/go-behave/core"
+	"github.com/hnlxhzw/go-behave/core"
 )
 
 // Sequence updates each child in order, returning success only if
