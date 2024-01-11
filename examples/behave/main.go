@@ -14,6 +14,7 @@ import (
 	// common word identifiers such as "Fail" and "Sequence".
 	. "github.com/hnlxhzw/go-behave/common/action"
 	. "github.com/hnlxhzw/go-behave/common/composite"
+	. "github.com/hnlxhzw/go-behave/common/condition" // 导入条件节点
 	. "github.com/hnlxhzw/go-behave/common/decorator"
 )
 
@@ -30,21 +31,46 @@ import (
 // 	),
 // )
 
-var someRoot = Sequence(
-	Repeater(core.Params{"n": 2}, Succeed()),
-	//Delayer(core.Params{"ms":2000}, Succeed()),
-	RandomDelayer(core.Params{"msMin": 1000, "msMax": 3000}, Succeed()),
-	//Succeed(),
-	RandomSelector(Work(func() {
-		fmt.Println("WorkWorkWorkWork111!!!!")
-	}), Work(func() {
-		fmt.Println("WorkWorkWorkWork222!!!!")
-	}), Work(func() {
-		fmt.Println("WorkWorkWorkWork333!!!!")
-	}), Work(func() {
-		fmt.Println("WorkWorkWorkWork444!!!!")
-	})),
+//var someRoot = Sequence(
+//	Repeater(core.Params{"n": 2}, Succeed()),
+//	//Delayer(core.Params{"ms":2000}, Succeed()),
+//	RandomDelayer(core.Params{"msMin": 1000, "msMax": 3000}, Succeed()),
+//	//Succeed(),
+//	RandomSelector(Work(func() {
+//		fmt.Println("WorkWorkWorkWork111!!!!")
+//	}), Work(func() {
+//		fmt.Println("WorkWorkWorkWork222!!!!")
+//	}), Work(func() {
+//		fmt.Println("WorkWorkWorkWork333!!!!")
+//	}), Work(func() {
+//		fmt.Println("WorkWorkWorkWork444!!!!")
+//	})),
+//)
+
+var someRoot = Repeater(core.Params{"n": 2},
+	RandomSelector(
+		WorkWithCondition("Condition1111!!!!", func() bool {
+			fmt.Println("Condition1111!!!!")
+			return true
+		}, func() {
+			fmt.Println("WorkWorkWorkWork111!!!!")
+		}),
+		WorkWithCondition("Condition222222!!!!", func() bool {
+			fmt.Println("Condition222222!!!!")
+			return true
+		}, func() {
+			fmt.Println("WorkWorkWorkWork222!!!!")
+		}),
+	),
 )
+
+// WorkWithCondition is a helper function to combine a condition and work.
+func WorkWithCondition(conditionName string, conditionFunc func() bool, workFunc func()) core.Node {
+	return Sequence(
+		Condition(conditionName, conditionFunc),
+		Work(workFunc),
+	)
+}
 
 // ID is a simple type only used as tree owner for testing.
 // In a real scenario, the owner would be an actual entity
