@@ -5,7 +5,7 @@ import (
 )
 
 //Work tick 时候执行执行的func
-func Work(f func()) core.Node {
+func Work(f func() bool) core.Node {
 	base := core.NewLeaf("work")
 	return &work{Leaf: base, cbFunc: f}
 }
@@ -13,7 +13,7 @@ func Work(f func()) core.Node {
 // work ...
 type work struct {
 	*core.Leaf
-	cbFunc func()
+	cbFunc func() bool
 }
 
 // Enter ...
@@ -22,7 +22,9 @@ func (a *work) Enter(ctx *core.Context) {}
 // Tick ...
 func (a *work) Tick(ctx *core.Context) core.Status {
 	if a.cbFunc != nil {
-		a.cbFunc()
+		if !a.cbFunc() {
+			return core.StatusRunning
+		}
 	}
 	return core.StatusSuccess
 }
