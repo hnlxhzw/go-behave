@@ -6,25 +6,25 @@ import (
 	"time"
 )
 
-func RandomHitSelector(children ...core.Node) core.Node {
-	base := core.NewComposite("RandomHitSelector", children)
-	return &randomHitSelector{Composite: base}
+func HitSelector(children ...core.Node) core.Node {
+	base := core.NewComposite("HitSelector", children)
+	return &hitSelector{Composite: base}
 }
 
-// randomHitSelector ...
-type randomHitSelector struct {
+// hitSelector ...
+type hitSelector struct {
 	*core.Composite
 	count    int32
 	maxCount int32
 }
 
 // Enter ...
-func (s *randomHitSelector) Enter(ctx *core.Context) {
+func (s *hitSelector) Enter(ctx *core.Context) {
 	s.maxCount = 100
 }
 
 // Tick ...
-func (s *randomHitSelector) Tick(ctx *core.Context) core.Status {
+func (s *hitSelector) Tick(ctx *core.Context) core.Status {
 	for {
 		if s.count > s.maxCount {
 			break
@@ -41,4 +41,4 @@ func (s *randomHitSelector) Tick(ctx *core.Context) core.Status {
 }
 
 // Leave ...
-func (s *randomHitSelector) Leave(ctx *core.Context) {}
+func (s *hitSelector) Leave(ctx *core.Context) {}
